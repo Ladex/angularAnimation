@@ -27,10 +27,10 @@ body {
 
 
 .item.ng-enter {
-    transition: left (@time-scale * @enter-left) cubic-bezier(0.68, -0.55, 0.265, 1.55) (@time-scale * @enter-left-delay), top (@time-scale * @enter-top) cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity (@time-scale * @enter-fade) linear;
-    opacity: 0;
-    left: 300px;
-    top: -500px;
+  -webkit-animation: lightSpeedIn @enter;
+  -moz-animation: lightSpeedIn @enter;
+  -ms-animation: lightSpeedIn @enter;
+  animation: lightSpeedIn @enter;
 }
 
 .item.ng-enter.ng-enter-active {
@@ -40,10 +40,10 @@ body {
 }
 
 .item.ng-leave {
-    transition: left (@time-scale * @leave-left) cubic-bezier(0.68, -0.55, 0.265, 1.55), top (@time-scale * @leave-top) cubic-bezier(0.68, -0.55, 0.265, 1.55) (@time-scale * @leave-top-delay), opacity (@time-scale * @leave-fade) linear;
-    top: 0;
-    left: 0;
-    opacity: 1;
+  -webkit-animation: lightSpeedOut @leave;
+  -moz-animation: lightSpeedOut @leave;
+  -ms-animation: lightSpeedOut @leave;
+  animation: lightSpeedOut @leave;
 }
 
 .item.ng-leave.ng-leave-active {
