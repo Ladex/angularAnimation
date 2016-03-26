@@ -1,0 +1,22 @@
+{
+  "name": "animation",
+  "authors": [
+    "ladex <ladipoilori@yahoo.com>"
+  ],
+  "description": "angular animation",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.5.3",
+    "bootstrap": "^3.3.6"
+  }
+}
