@@ -1,7 +1,7 @@
 /*global angular*/
 (function() {
     'use strict';
-    angular.module('myApp.controllers',['myApp.filters']).controller('NgAnimateCtrl', AnimationController)
+    angular.module('myApp.controllers', ['myApp.filters']).controller('NgAnimateCtrl', AnimationController)
 
 
     function AnimationController() {
@@ -17,11 +17,15 @@
 
         vm.inputText = "";
         vm.addItem = function() {
-            vm.items.push({
-                text: vm.inputText,
-                completed: false
-            });
-            
+            var arrTodo = vm.inputText.split(',');
+            for (var i = 0; i < arrTodo.length; i++) {
+                vm.items.push({
+                    text: arrTodo[i],
+                    completed: false
+                });
+            }
+
+
             vm.inputText = "";
         };
     }

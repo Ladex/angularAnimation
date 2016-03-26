@@ -7,7 +7,6 @@
 @leave-top: 1s;
 @leave-top-delay: 1s;
 @leave-fade: 2s;
-
 @enter: 1s;
 @leave: 1s;
 body {
@@ -25,12 +24,11 @@ body {
     position: relative;
 }
 
-
 .item.ng-enter {
-  -webkit-animation: lightSpeedIn @enter;
-  -moz-animation: lightSpeedIn @enter;
-  -ms-animation: lightSpeedIn @enter;
-  animation: lightSpeedIn @enter;
+    -webkit-animation: lightSpeedIn @enter;
+    -moz-animation: lightSpeedIn @enter;
+    -ms-animation: lightSpeedIn @enter;
+    animation: lightSpeedIn @enter;
 }
 
 .item.ng-enter.ng-enter-active {
@@ -40,14 +38,23 @@ body {
 }
 
 .item.ng-leave {
-  -webkit-animation: lightSpeedOut @leave;
-  -moz-animation: lightSpeedOut @leave;
-  -ms-animation: lightSpeedOut @leave;
-  animation: lightSpeedOut @leave;
+    -webkit-animation: lightSpeedOut @leave;
+    -moz-animation: lightSpeedOut @leave;
+    -ms-animation: lightSpeedOut @leave;
+    animation: lightSpeedOut @leave;
 }
 
 .item.ng-leave.ng-leave-active {
     opacity: 0;
     left: 300px;
     top: 1500px;
+}
+
+.item.ng-enter-stagger,
+.item.ng-leave-stagger,
+.item.ng-move-stagger {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    -webkit-transition-duration: 0;
+    transition-duration: 0;
 }
