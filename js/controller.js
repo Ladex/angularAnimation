@@ -3,7 +3,7 @@
     'use strict';
     angular.module('myApp.controllers', ['myApp.filters'])
         .controller('NgAnimateCtrl', AnimationController)
-        .animate('.item', itemAnimation);
+        .animation('.item', itemAnimation);
 
 
     function AnimationController() {
