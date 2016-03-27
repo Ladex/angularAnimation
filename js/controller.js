@@ -1,7 +1,9 @@
 /*global angular*/
 (function() {
     'use strict';
-    angular.module('myApp.controllers', ['myApp.filters']).controller('NgAnimateCtrl', AnimationController)
+    angular.module('myApp.controllers', ['myApp.filters'])
+        .controller('NgAnimateCtrl', AnimationController)
+        .animate('.item', itemAnimation);
 
 
     function AnimationController() {
@@ -31,4 +33,24 @@
     }
 
 
+    function itemAnimation() {
+        return {
+            enter: function(element, done) {
+                element.css({
+                    opacity: 0,
+                    'margin-left': '-230px'
+                });
+                element.animate({
+                    opacity: 1,
+                    'margin-left': 0
+                }, 500, done);
+            },
+            leave: function(element, className, done) {
+                element.animate({
+                    'opacity': 0,
+                    'margin-left': -230
+                }, 500, done);
+            }
+        }
+    }
 })();
